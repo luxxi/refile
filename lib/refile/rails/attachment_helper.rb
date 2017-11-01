@@ -110,6 +110,7 @@ module Refile
         multiple: options[:multiple],
         value: object.send("#{method}_data").try(:to_json),
         object: object,
+        name: options[:name] || object_name,
         id: nil,
         data: { reference: options[:data][:reference] }
       }
